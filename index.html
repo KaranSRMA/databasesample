@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Database</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        button {
+            padding: 5px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add Data to Database</h1>
+    <button onclick="addData()">Add</button>
+
+    <script>
+        async function addData(){
+            let f = await fetch("/data");
+            let r = await f.json();
+        }
+    </script>
+</body>
+</html>
