@@ -13,9 +13,9 @@ app.get('/', (req, res) => {
 app.get('/data', async (req, res) => {
     // Create and save the new user
     const newuser = await User.create({
-        name: "Karan",
+        name: "User",
         age: 20,
-        email: "karan@sharma.com"
+        email: "test@email.com"
     });
     console.log(newuser.name);
     res.send("Succesfull")
